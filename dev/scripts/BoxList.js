@@ -21,7 +21,7 @@ class BoxList extends React.Component {
     render() {
         return(
             <div>
-                <p>I am the Box List</p>
+                <h2>Box List</h2>
                 {this.state.boxListData.map((box) => {
                    return(
                        <Box data={box} key={box.id} />

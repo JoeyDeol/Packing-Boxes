@@ -1,0 +1,14 @@
+@import "./partials/setup";
+@import "./partials/base";
+@import "./partials/item-list";
+@import "./partials/box-list";
+
+body {
+    max-width: 1440px;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}

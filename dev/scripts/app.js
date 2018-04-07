@@ -31,15 +31,15 @@ class App extends React.Component {
     render() {
       return (
         <div>
-          <h1>Rose Rocket Packing Page</h1>
-          <Users />
-          <div className="item__list">
-            <button>Items</button>
-            <ItemList />
-          </div>
-          <div className="box__list">
-            <button>Boxes</button>
-            <BoxList />
+          <div className="wrapper">
+            <h1>Rose Rocket Packing Page</h1>
+            {/* <Users /> */}
+            <div className="item__list">
+              <ItemList />
+            </div>
+            <div className="box__list">
+              <BoxList />
+            </div>
           </div>
         </div>
       )

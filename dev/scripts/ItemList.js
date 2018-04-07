@@ -20,7 +20,7 @@ class ItemList extends React.Component {
     render() {
        return(
         <div>
-            <p>I am the Item List</p>
+            <h2>Item List</h2>
             {this.state.itemListData.map((item) => {
                 return(
                     <Item data={item} key={item.id}/>

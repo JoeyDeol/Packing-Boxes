@@ -4,30 +4,26 @@ class Users extends React.Component {
     constructor() {
         super();
         this.state = {
-            users: [],
+            users: {},
         }
     }
     componentDidMount() {
         const dbref = firebase.database().ref('usersOnline');
         dbref.on('value', (snapshot) => {
             const usersData = snapshot.val();
-            const usersArray = [];
-            usersArray.push(usersData);
             this.setState({
-                users: usersArray,
+                users: usersData,
             })
         })
     }
 
     render(){
-        // console.log(this.state.users);
         return(
             <div>
-                <p>I am a User</p>
-                {/* {this.state.users.map((item) => {
-                    console.log(item);
-                    return <p></p>
-                })} */}
+                <h2>Users:</h2>
+                {Object.keys(this.state.users).map((user) => {
+                    return <p key={user}>{this.state.users[user]}</p>
+                })}
             </div>
         )
     }
